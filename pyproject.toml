@@ -1,0 +1,10 @@
+[project]
+name = "energy-api"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "annotated>=0.0.2",
+    "fastapi>=0.137.1",
+    "pydantic-settings>=2.14.1",
+    "sqlmodel>=0.0.38",
+]
