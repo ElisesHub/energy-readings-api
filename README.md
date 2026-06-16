@@ -4,6 +4,7 @@ A FastAPI + PostgreSQL service for ingesting and reporting energy meter consumpt
 
 ## Tech Stack
 
+- **Python 3.13**
 - **FastAPI** — web framework
 - **SQLModel** — ORM (SQLAlchemy + Pydantic combined)
 - **PostgreSQL 16** — database
