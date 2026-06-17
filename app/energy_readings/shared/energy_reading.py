@@ -5,13 +5,13 @@ from sqlmodel import Field, SQLModel, Enum as SAEnum
 import datetime
 
 class EnergyReading(SQLModel, table=True):
-    __tablename__ = "energy_reading"
+    __tablename__ = "energy_readings"
     id: int | None = Field(default=None, primary_key=True)
     meter_id: str
     timestamp: datetime.datetime = Field(
         sa_column=Column(DateTime(timezone=True), nullable=False)
     )
-    age: float | None = Field(default=None, index=True)
+    kwh: float | None = Field(default=None, index=True)
     reading_type: EnergyReadingType = Field(
         sa_column=Column(
             SAEnum(

@@ -1,4 +1,4 @@
-INSERT INTO public.energy_reading (meter_id, "timestamp", age, reading_type)
+INSERT INTO public.energy_readings (meter_id, "timestamp", kwh, reading_type)
 VALUES
     ('meter-001', '2026-01-01T00:00:00+00:00', 16.88, 'generation'),
     ('meter-002', '2026-01-01T01:00:00+00:00', 111.03, 'consumption'),
