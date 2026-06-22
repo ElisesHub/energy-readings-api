@@ -1,7 +1,7 @@
-from datetime import date, datetime
+from datetime import datetime
 
-from app.energy_readings.shared.energy_reading_type import EnergyReadingType
 from pydantic import BaseModel, ConfigDict, model_validator, Field
+from app.energy_readings.shared.energy_reading_type import EnergyReadingType
 
 
 class DailyAggregateResponse(BaseModel):

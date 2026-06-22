@@ -1,8 +1,9 @@
 from sqlalchemy import DateTime
-from app.energy_readings.shared.energy_reading_type import EnergyReadingType
 from sqlmodel import Column
 from sqlmodel import Field, SQLModel, Enum as SAEnum
 import datetime
+from app.energy_readings.shared.energy_reading_type import EnergyReadingType
+
 
 class EnergyReading(SQLModel, table=True):
     __tablename__ = "energy_readings"

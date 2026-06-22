@@ -1,7 +1,6 @@
 from datetime import datetime
-from app.energy_readings.shared.energy_reading_type import EnergyReadingType
 from pydantic import BaseModel, ConfigDict
-
+from app.energy_readings.shared.energy_reading_type import EnergyReadingType
 
 
 class ReadingResponse(BaseModel):             # output shape
@@ -11,3 +10,4 @@ class ReadingResponse(BaseModel):             # output shape
     timestamp: datetime
     kwh: float
     reading_type: EnergyReadingType
+

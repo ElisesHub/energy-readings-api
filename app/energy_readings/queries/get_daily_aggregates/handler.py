@@ -1,6 +1,5 @@
 from sqlalchemy.sql.functions import func
 from sqlmodel import Session, select
-from fastapi import HTTPException
 from app.energy_readings.shared.energy_reading import EnergyReading
 from .schemas import DailyAggregateParams
 

@@ -8,7 +8,7 @@ class ListReadingParams(BaseModel):
     reading_type: EnergyReadingType | None = None
     date_from: datetime | None = Field(default=None, alias="from")
     date_to: datetime | None = Field(default=None, alias="to")
-    limit: int = 10
+    limit: int = 50
     offset: int = 0
 
     # Runs after Pydantic has parsed and validated every individual field, and is called
