@@ -1,5 +1,8 @@
 fastapi[standard]
-uvicorn
 sqlmodel
+sqlalchemy
 pydantic-settings
 psycopg2-binary
+# test dependencies
+python-dotenv
+pytest
