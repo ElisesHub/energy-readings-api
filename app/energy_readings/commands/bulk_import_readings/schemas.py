@@ -2,7 +2,7 @@ from datetime import datetime
 from typing import List
 from pydantic import BaseModel, field_validator, ConfigDict
 
-
+from app.energy_readings.shared.energy_reading_type import EnergyReadingType
 
 
 class SingleReading(BaseModel):
