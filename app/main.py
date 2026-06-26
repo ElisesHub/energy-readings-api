@@ -10,7 +10,7 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Hello and welcome"}
 
 app.include_router(daily_aggregates_router)
 app.include_router(get_reading_by_id_router)
