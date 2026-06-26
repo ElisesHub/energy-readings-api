@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:18.4
+    container_name: energy-db-test
+    restart: unless-stopped
+    env_file:
+      - .env.test
+    environment:
+      POSTGRES_USER: ${TEST_POSTGRES_USERNAME}
+      POSTGRES_PASSWORD: ${TEST_POSTGRES_PASSWORD}
+      POSTGRES_DB: ${TEST_DB_REF}
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d  # mount ./init into Postgres's init dir so the .sql files auto-run on first DB init
+    ports:
+      - "${TEST_POSTGRES_PORT}:5432"
+
