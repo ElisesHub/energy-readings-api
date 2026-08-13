@@ -71,25 +71,25 @@ curl -X 'POST'  'http://localhost:8000/readings' -H 'accept: application/json'  
 # NOTE >> this example deliberately includes a duplicate to demonstrate bulk-insert handling
 curl -X 'POST'  'http://localhost:8000/readings/bulk' -H 'accept: application/json'  -H 'Content-Type: application/json'  -d '[
   {
-    "meter_id": "meter-200",
+    "meter_id": "meter-400",
     "timestamp": "2026-06-19T12:12:29.154Z",
     "kwh": 1.2,
     "reading_type": "consumption"
   },
 {
-    "meter_id": "meter-200",
+    "meter_id": "meter-205",
     "timestamp": "2026-06-19T12:12:29.154Z",
     "kwh": 2.5,
     "reading_type": "generation"
   },
 {
-    "meter_id": "meter-201",
+    "meter_id": "meter-801",
     "timestamp": "2026-06-19T12:12:29.154Z",
     "kwh": 1.2,
     "reading_type": "consumption"
   },
 {
-    "meter_id": "meter-201",
+    "meter_id": "meter-801",
     "timestamp": "2026-06-19T12:12:29.154Z",
     "kwh": 1.2,
     "reading_type": "consumption"
