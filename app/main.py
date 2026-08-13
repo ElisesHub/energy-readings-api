@@ -4,9 +4,14 @@ from app.energy_readings.queries.get_reading_by_id.router  import router as get_
 from app.energy_readings.queries.get_daily_aggregates.router  import router as daily_aggregates_router
 from app.energy_readings.commands.create_reading.router  import router as create_reading_router
 from app.energy_readings.commands.bulk_import_readings.router import router as bulk_import_readings_router
-
+from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
+app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["http://localhost:5174"],
+        allow_methods=["*"],
+        allow_headers=["*"],)
 
 @app.get("/")
 async def root():
