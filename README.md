@@ -30,13 +30,13 @@ docker compose down -v && docker compose up --build
 
 ## API
 
-| Method | Path | Description |
-|---|---|---|
-| `GET` | `/readings` | List readings. Filters: `meter_id`, `reading_type`, `from`, `to`. Paginated. |
-| `GET` | `/readings/{id}` | Fetch one reading. 404 if missing. |
-| `POST` | `/readings` | Create a single reading. |
-| `POST` | `/readings/bulk` | Bulk-create readings from a JSON array. |
-| `GET` | `/aggregates/daily` | Daily kWh totals per meter, filtered by date range and reading type. |
+| Method | Path               | Description |
+|---|--------------------|---|
+| `GET` | `/readings`        | List readings. Filters: `meter_id`, `reading_type`, `from`, `to`. Paginated. |
+| `GET` | `/readings/{id}`   | Fetch one reading. 404 if missing. |
+| `POST` | `/readings`        | Create a single reading. |
+| `POST` | `/readings/bulk`   | Bulk-create readings from a JSON array. |
+| `GET` | `/summaries/daily` | Daily kWh totals per meter, filtered by date range and reading type. |
  
  
 ### Using a terminal:

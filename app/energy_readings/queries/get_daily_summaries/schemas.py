@@ -6,19 +6,19 @@ from pydantic.alias_generators import to_camel
 from app.energy_readings.shared.energy_reading_type import EnergyReadingType
 
 
-class DailyAggregateResponse(BaseModel):
+class DailySummaryResponse(BaseModel):
     model_config = ConfigDict(
         from_attributes=True, # Allows model_validate() to populate this schema from an ORM entity's attributes, not just a dict.
         alias_generator=AliasGenerator(serialization_alias=to_camel) # ensures the properties will be exported as camel case instead of following the python naming convention
     )
     day: datetime
     reading_count: int
-    total_kwh: float
+    kwh_consumed: float
+    kwh_generated: float
+    kwh_net_import: float
 
-
-class DailyAggregateParams(BaseModel):
+class DailySummaryParams(BaseModel):
     meter_id: str
-    reading_type: EnergyReadingType
     date_from: datetime  = Field(alias="from")
     date_to: datetime = Field(alias="to")
 
